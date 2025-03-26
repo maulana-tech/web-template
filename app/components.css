@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-neon-blue text-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(0,240,255,0.5)];
+  }
+  
+  .btn-secondary {
+    @apply bg-neon-pink text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(255,0,196,0.5)];
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark rounded-xl shadow-lg overflow-hidden transition-all duration-300;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-neon-blue to-neon-pink animate-gradient-x;
+  }
+}

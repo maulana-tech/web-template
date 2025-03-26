@@ -1,4 +1,9 @@
 import Image from "next/image";
+import HeroSection from '@/components/home/HeroSection';
+import TemplateCategories from '@/components/home/TemplateCategories';
+import TemplateShowcase from '@/components/home/TemplateShowcase';
+import PricingTiers from '@/components/home/PricingTiers';
+import DeveloperFeatures from '@/components/home/DeveloperFeatures';
 
 export default function Home() {
   return (
