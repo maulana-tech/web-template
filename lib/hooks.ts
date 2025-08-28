@@ -11,7 +11,8 @@ import {
 } from './queries'
 import type { 
   Template, 
-  TemplateWithImages, 
+  TemplateWithImages,
+  TemplateWithImagesAndUser, 
   User,
   Collection,
   TemplateCategory 
@@ -19,7 +20,7 @@ import type {
 
 // Template hooks
 export function useTemplates(category?: TemplateCategory, page = 1, limit = 12) {
-  const [templates, setTemplates] = useState<TemplateWithImages[]>([])
+  const [templates, setTemplates] = useState<TemplateWithImagesAndUser[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [hasMore, setHasMore] = useState(true)
@@ -53,7 +54,7 @@ export function useTemplates(category?: TemplateCategory, page = 1, limit = 12) 
 }
 
 export function useFeaturedTemplates(limit = 6) {
-  const [templates, setTemplates] = useState<TemplateWithImages[]>([])
+  const [templates, setTemplates] = useState<TemplateWithImagesAndUser[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -103,7 +104,7 @@ export function useTemplate(id: string) {
 }
 
 export function useTemplateSearch() {
-  const [results, setResults] = useState<TemplateWithImages[]>([])
+  const [results, setResults] = useState<TemplateWithImagesAndUser[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -279,7 +280,7 @@ export function useUserCollections() {
       const { data, error } = await collectionQueries.createCollection({
         user_id: user.id,
         name,
-        description,
+        description: description || null,
         is_public: isPublic
       })
       if (error) throw error

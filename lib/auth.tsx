@@ -59,7 +59,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session }, error }) => {
+    supabase.auth.getSession().then(({ data: { session }, error }: { data: { session: Session | null }, error: any }) => {
       if (error && error.message.includes('Supabase not configured')) {
         console.warn('🔧 Auth disabled: Supabase not configured');
         setSession(null);
@@ -77,7 +77,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
       
       setLoading(false);
-    }).catch((error) => {
+    }).catch((error: any) => {
       console.warn('🔧 Auth initialization failed:', error.message);
       setSession(null);
       setUser(null);
@@ -89,7 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const {
         data: { subscription },
-      } = supabase.auth.onAuthStateChange(async (event, session) => {
+      } = supabase.auth.onAuthStateChange(async (event: any, session: Session | null) => {
         setSession(session);
         setUser(session?.user ?? null);
         
