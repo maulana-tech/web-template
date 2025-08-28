@@ -1,7 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Template
 
-## Getting Started
+This repository contains a web template built primarily using TypeScript.
 
+ run-build
 This project uses [pnpm](https://pnpm.io/) as the package manager. If you don't have pnpm installed, you can install it globally:
 
 ```bash
@@ -28,11 +29,44 @@ yarn dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Overview
+
+This project is a web template designed to help developers quickly start their web applications. It includes a set of tools and configurations to streamline the development process.
+
+## Features
+
+- Written in TypeScript
+- Modular design
+- Easy to customize
+- Pre-configured with essential tools
+
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/maulana-tech/web-template.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd web-template
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
 
 ## Available Scripts
 
@@ -57,16 +91,25 @@ pnpm analyze:serve    # Analyze and serve bundle report
 ```
 
 ## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+To start the development server, run:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To build the project for production, run:
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
+
+Feel free to customize this template further according to your project's specific needs!
