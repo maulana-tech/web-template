@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production builds
+.next/
+out/
+build/
+dist/
+
+# Cache
+.turbo/
+.eslintcache
+
+# Environment variables
+.env*
+
+# Package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+*.log
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Generated files
+*.d.ts.map
+*.js.map
+
+# Config files that should not be formatted
+next.config.js
+tailwind.config.js
+postcss.config.js

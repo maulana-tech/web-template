@@ -2,6 +2,33 @@
 
 This repository contains a web template built primarily using TypeScript.
 
+ run-build
+This project uses [pnpm](https://pnpm.io/) as the package manager. If you don't have pnpm installed, you can install it globally:
+
+```bash
+npm install -g pnpm
+# or
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+First, install the dependencies:
+
+```bash
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
+pnpm dev
+# or alternatively:
+npm run dev
+# or
+yarn dev
+# or
+bun dev
+```
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -22,6 +49,7 @@ This project is a web template designed to help developers quickly start their w
 - Easy to customize
 - Pre-configured with essential tools
 
+
 ## Getting Started
 
 To get started with this project, follow these steps:
@@ -39,6 +67,30 @@ To get started with this project, follow these steps:
    npm install
    ```
 
+
+## Available Scripts
+
+Here are the available pnpm scripts for this project:
+
+```bash
+# Development
+pnpm dev              # Start development server with Turbopack
+pnpm build            # Build for production
+pnpm start            # Start production server
+
+# Code Quality
+pnpm lint             # Run ESLint
+pnpm lint:fix         # Fix ESLint issues automatically
+pnpm format           # Format code with Prettier
+pnpm format:check     # Check code formatting
+pnpm type-check       # Run TypeScript type checking
+
+# Analysis
+pnpm analyze          # Analyze bundle size
+pnpm analyze:serve    # Analyze and serve bundle report
+```
+
+## Learn More
 ## Usage
 
 To start the development server, run:
