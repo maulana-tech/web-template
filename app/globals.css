@@ -26,4 +26,113 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Accessibility Enhancements */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Show content when focused (for skip links) */
+.sr-only:focus,
+.focus-within\:not-sr-only:focus-within .sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Enhanced focus indicators */
+.focus-visible {
+  outline: 2px solid #00F0FF;
+  outline-offset: 2px;
+}
+
+/* Keyboard navigation detection */
+body[data-keyboard-navigation] *:focus {
+  outline: 2px solid #00F0FF;
+  outline-offset: 2px;
+}
+
+body:not([data-keyboard-navigation]) *:focus {
+  outline: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-bg {
+    background: currentColor;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus management for modal and interactive elements */
+[data-focus-trap] {
+  position: relative;
+}
+
+/* Skip link animations */
+.skip-link {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Improved button focus states */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #00F0FF;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.1);
+}
+
+/* Dark mode focus adjustments */
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark input:focus-visible,
+.dark select:focus-visible,
+.dark textarea:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.2);
+}
+
+/* Ensure sufficient color contrast for text */
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af;
+}
+
 /* Move component styles to a separate file or define them directly in components */
