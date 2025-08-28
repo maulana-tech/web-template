@@ -57,6 +57,11 @@ export const templateQueries = {
           alt_text,
           is_primary,
           sort_order
+        ),
+        users (
+          id,
+          full_name,
+          avatar_url
         )
       `)
       .eq('status', 'published')
@@ -111,6 +116,11 @@ export const templateQueries = {
           alt_text,
           is_primary,
           sort_order
+        ),
+        users (
+          id,
+          full_name,
+          avatar_url
         )
       `)
       .eq('status', 'published')
@@ -137,6 +147,11 @@ export const templateQueries = {
           alt_text,
           is_primary,
           sort_order
+        ),
+        users (
+          id,
+          full_name,
+          avatar_url
         )
       `)
       .eq('created_by', userId)

@@ -345,6 +345,12 @@ export type TemplateWithUser = Template & {
   users: Pick<User, 'id' | 'full_name' | 'avatar_url'> | null
 }
 
+// Comprehensive template type that can include both images and user info
+export type TemplateWithImagesAndUser = Template & {
+  template_images: TemplateImage[]
+  users?: Pick<User, 'id' | 'full_name' | 'avatar_url'> | null
+}
+
 export type CollectionWithTemplates = Collection & {
   collection_templates: {
     templates: Template
