@@ -6,10 +6,10 @@ import { motion } from 'framer-motion'
 import { useAuth } from '@/lib/auth'
 import { useUserFavorites, useUserPurchases } from '@/lib/hooks'
 import { ProgressiveImage } from '@/components/ui/LoadingComponents'
-import type { TemplateWithImages } from '@/lib/database.types'
+import type { TemplateWithImagesAndUser } from '@/lib/database.types'
 
 interface TemplateCardProps {
-  template: TemplateWithImages
+  template: TemplateWithImagesAndUser
   index?: number
   showCategory?: boolean
   showAuthor?: boolean
