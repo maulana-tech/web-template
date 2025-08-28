@@ -1,14 +1,15 @@
 'use client';
+'use client'
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Text, Box } from '@react-three/drei';
-import * as THREE from 'three';
+import type { Mesh } from 'three';
 
 // Simple 3D component for the builder
 function TemplateElement({ position, color, onClick }: { position: [number, number, number]; color: string; onClick: () => void }) {
-  const meshRef = useRef<THREE.Mesh>(null);
+  const meshRef = useRef<Mesh>(null);
   
   useFrame((state) => {
     if (meshRef.current) {
