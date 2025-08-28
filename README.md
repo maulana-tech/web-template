@@ -2,14 +2,28 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+This project uses [pnpm](https://pnpm.io/) as the package manager. If you don't have pnpm installed, you can install it globally:
 
 ```bash
+npm install -g pnpm
+# or
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+First, install the dependencies:
+
+```bash
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
+pnpm dev
+# or alternatively:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 # or
 bun dev
 ```
@@ -19,6 +33,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Available Scripts
+
+Here are the available pnpm scripts for this project:
+
+```bash
+# Development
+pnpm dev              # Start development server with Turbopack
+pnpm build            # Build for production
+pnpm start            # Start production server
+
+# Code Quality
+pnpm lint             # Run ESLint
+pnpm lint:fix         # Fix ESLint issues automatically
+pnpm format           # Format code with Prettier
+pnpm format:check     # Check code formatting
+pnpm type-check       # Run TypeScript type checking
+
+# Analysis
+pnpm analyze          # Analyze bundle size
+pnpm analyze:serve    # Analyze and serve bundle report
+```
 
 ## Learn More
 
